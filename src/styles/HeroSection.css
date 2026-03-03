@@ -1,0 +1,367 @@
+/* Hero Section */
+.hero {
+  background: linear-gradient(135deg, #FFF5E6 0%, #FFE8CC 100%);
+  padding: 50px 0 50px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 60px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 100px;
+  align-items: center;
+}
+
+/* Left Side */
+.hero-left {
+  max-width: 600px;
+}
+
+/* Delivery Badge */
+.delivery-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: #FFFFFF;
+  padding: 13px 26px;
+  border-radius: 50px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  margin-bottom: 30px;
+}
+
+.badge-icon {
+  font-size: 22px;
+}
+
+.badge-text {
+  font-size: 14px;
+  font-weight: 500;
+  color: #333333;
+  font-family: 'Inter', 'Poppins', sans-serif;
+}
+
+/* Main Heading */
+.hero-heading {
+  font-size: 65px;
+  font-weight: 600;
+  line-height: 1.15;
+  color: #2B2B2B;
+  margin-bottom: 22px;
+  font-family: 'Inter', 'Poppins', sans-serif;
+  letter-spacing: -1px;
+}
+
+.heading-orange {
+  color: #FC8A06;
+}
+
+/* Subtext */
+.hero-subtext {
+  font-size: 18px;
+  color: #666666;
+  line-height: 1.6;
+  margin-bottom: 42px;
+  font-family: 'Inter', 'Poppins', sans-serif;
+}
+
+/* Search Box */
+.search-box {
+  display: flex;
+  align-items: center;
+  background: #FFFFFF;
+  border-radius: 60px;
+  padding: 8px 8px 8px 26px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
+  max-width: 650px;
+}
+
+.search-group {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex: 1;
+}
+
+.search-icon {
+  font-size: 20px;
+}
+
+.search-input {
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 15px;
+  font-family: 'Inter', 'Poppins', sans-serif;
+  width: 100%;
+  color: #000000;
+}
+
+.search-input::placeholder {
+  color: #AAAAAA;
+}
+
+.search-divider {
+  width: 1px;
+  height: 35px;
+  background: #E8E8E8;
+  margin: 0 18px;
+}
+
+.search-button {
+  width: 58px;
+  height: 58px;
+  background: #FC8A06;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  transition: all 0.3s;
+  flex-shrink: 0;
+}
+
+.search-button:hover {
+  background: #E67900;
+  transform: scale(1.05);
+  box-shadow: 0 8px 25px rgba(252, 138, 6, 0.4);
+}
+
+/* Right Side - Image */
+.hero-right {
+  position: relative;
+}
+
+.hero-image-wrapper {
+  position: relative;
+  animation: heroFloat 6s ease-in-out infinite;
+}
+
+@keyframes heroFloat {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-25px);
+  }
+}
+
+
+/* Floating Cards */
+.float-card {
+  position: absolute;
+  background: #FFFFFF;
+  border-radius: 18px;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.18);
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 16px 22px;
+  animation: cardFloat 4s ease-in-out infinite;
+  z-index: 2;
+}
+
+@keyframes cardFloat {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-18px);
+  }
+}
+
+/* Card 1 - User Review (Top Right) */
+.card-1 {
+  top: 8%;
+  right: -5%;
+  animation-delay: 0s;
+}
+
+.card-avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.card-name {
+  font-size: 15px;
+  font-weight: 600;
+  color: #2B2B2B;
+  margin-bottom: 4px;
+  font-family: 'Inter', 'Poppins', sans-serif;
+}
+
+.card-stars {
+  font-size: 12px;
+}
+
+/* Card 2 - Notification (Middle Right) */
+.card-2 {
+  top: 48%;
+  right: -5%;
+  animation-delay: 1.5s;
+}
+
+.notification-dot {
+  width: 12px;
+  height: 12px;
+  background: #00D084;
+  border-radius: 50%;
+  animation: dotPulse 2s infinite;
+}
+
+@keyframes dotPulse {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.6;
+    transform: scale(1.2);
+  }
+}
+
+.notification-text {
+  font-size: 14px;
+  font-weight: 500;
+  color: #2B2B2B;
+  font-family: 'Inter', 'Poppins', sans-serif;
+}
+
+/* Card 3 - Food Item (Bottom Left) */
+.card-3 {
+  bottom: -5%;
+  left: 55%;
+  animation-delay: 3s;
+}
+
+.card-food-img {
+  width: 58px;
+  height: 58px;
+  border-radius: 14px;
+  object-fit: cover;
+}
+
+.food-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: #2B2B2B;
+  margin-bottom: 2px;
+  font-family: 'Inter', 'Poppins', sans-serif;
+}
+
+.food-subtitle {
+  font-size: 13px;
+  color: #888888;
+  font-family: 'Inter', 'Poppins', sans-serif;
+}
+/* Orange curved background */
+.hero-right {
+  position: relative;
+  width: 650px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-bg-orange {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 400px;
+  height: 400px;
+  background: #FF9900;
+  border-radius: 200px 0 0 0px;
+  z-index: 1;
+}
+
+/* Secondary image behind main image */
+.secondary-img {
+  position: absolute;
+  width: 280px;
+  top: 50px;
+  right: 100px;
+  border-radius: 16px;
+  z-index: 2;
+}
+
+/* Main image */
+.main-img {
+  width: 620px;
+  align-items: center;
+  border-radius: 20px;
+  position: relative;
+  z-index: 3;
+  margin-left: -270px;
+}
+
+
+/* Responsive */
+@media (max-width: 1200px) {
+  .hero-heading {
+    font-size: 58px;
+  }
+
+  .hero-container {
+    gap: 60px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .hero-container {
+    grid-template-columns: 1fr;
+    padding: 0 40px;
+  }
+
+  .hero-heading {
+    font-size: 52px;
+  }
+
+  .hero-right {
+    margin-top: 40px;
+  }
+
+  .float-card {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 60px 0 80px;
+  }
+
+  .hero-container {
+    padding: 0 20px;
+  }
+
+  .hero-heading {
+    font-size: 42px;
+  }
+
+  .search-box {
+    flex-direction: column;
+    padding: 18px;
+    border-radius: 26px;
+  }
+
+  .search-divider {
+    display: none;
+  }
+
+  .search-group {
+    width: 100%;
+  }
+
+  .search-button {
+    width: 100%;
+    height: 50px;
+    border-radius: 18px;
+  }
+}

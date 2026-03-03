@@ -1,0 +1,401 @@
+/* App Download Section */
+.app-download-section {
+  padding: 80px 0;
+  background: #F5F5F5;
+}
+
+.app-download-container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 60px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+  background: #FFFFFF;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+}
+
+/* Left Side - Image */
+.app-download-left {
+  position: relative;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.couple-image {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Right Side - Content */
+.app-download-right {
+  padding: 60px 40px 60px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.app-content {
+  max-width: 500px;
+}
+
+/* Heading */
+.app-heading {
+  font-size: 48px;
+  font-weight: 700;
+  color: #000000;
+  margin-bottom: 8px;
+  font-family: 'Inter', 'Poppins', sans-serif;
+  line-height: 1.2;
+}
+
+.heading-orange {
+  color: #FC8A06;
+}
+
+/* Subheading */
+.app-subheading {
+  display: inline-flex;
+  align-items: center;
+  margin-bottom: 20px;
+  background: #03081F;
+  border-radius: 50px;
+  padding: 8px 24px;
+}
+
+.subheading-orange {
+  color: #FC8A06;
+  font-size: 28px;
+  font-weight: 700;
+  font-family: 'Inter', 'Poppins', sans-serif;
+}
+
+.subheading-white {
+  color: #FFFFFF;
+  font-size: 28px;
+  font-weight: 700;
+  font-family: 'Inter', 'Poppins', sans-serif;
+  margin-left: 8px;
+}
+
+/* Description */
+.app-description {
+  font-size: 16px;
+  color: #666666;
+  margin-bottom: 28px;
+  font-family: 'Inter', 'Poppins', sans-serif;
+  line-height: 1.6;
+}
+
+/* App Badges */
+.app-badges {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.app-badge-link {
+  text-decoration: none;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.app-badge-link:hover {
+  transform: translateY(-4px);
+}
+
+.badge-img {
+  height: 52px;
+  width: auto;
+}
+
+/* Fallback Badges */
+.badge-fallback {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.apple-badge {
+  background: #000000;
+  color: #FFFFFF;
+}
+
+.google-badge {
+  background: #000000;
+  color: #FFFFFF;
+}
+
+.badge-icon {
+  font-size: 28px;
+}
+
+.badge-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.badge-small {
+  font-size: 10px;
+  margin: 0;
+  font-family: 'Inter', 'Poppins', sans-serif;
+  color: white;
+}
+
+.badge-large {
+  font-size: 18px;
+  color: white;
+  font-weight: 600;
+  margin: 0;
+  font-family: 'Inter', 'Poppins', sans-serif;
+}
+
+/* Partner & Rider Section */
+.partner-rider-section {
+  padding: 50px 0;
+  background: #FFFFFF;
+}
+
+.partner-rider-container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 60px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+}
+
+/* Cards */
+.partner-card,
+.rider-card {
+  position: relative;
+  height: 350px;
+  border-radius: 20px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.partner-card:hover,
+.rider-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.18);
+}
+
+/* Background Image */
+.card-bg-image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+/* Overlay */
+.card-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.3) 0%,
+    rgba(0, 0, 0, 0.6) 100%
+  );
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  padding: 32px;
+}
+
+/* Card Badge */
+.card-badge {
+  display: inline-block;
+  align-self: flex-start;
+  background: #FFFFFF;
+  color: #000000;
+  padding: 10px 20px;
+  border-radius: 50px;
+  font-size: 13px;
+  font-weight: 500;
+  font-family: 'Inter', 'Poppins', sans-serif;
+  margin-bottom: auto;
+}
+
+/* Card Content */
+.card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.card-label {
+  font-size: 14px;
+  color: #FC8A06;
+  font-weight: 500;
+  margin: 0;
+  font-family: 'Inter', 'Poppins', sans-serif;
+}
+
+.card-title {
+  font-size: 36px;
+  font-weight: 700;
+  color: #FFFFFF;
+  margin: 0 0 16px 0;
+  font-family: 'Inter', 'Poppins', sans-serif;
+  line-height: 1.2;
+}
+
+/* Card Button */
+.card-button {
+  padding: 12px 32px;
+  background: #FC8A06;
+  border: none;
+  color: #FFFFFF;
+  font-weight: 600;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 15px;
+  font-family: 'Inter', 'Poppins', sans-serif;
+  transition: all 0.3s ease;
+  align-self: flex-start;
+}
+
+.card-button:hover {
+  background: #E67900;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(252, 138, 6, 0.4);
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+  .app-heading {
+    font-size: 42px;
+  }
+
+  .subheading-orange,
+  .subheading-white {
+    font-size: 24px;
+  }
+
+  .card-title {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .app-download-container {
+    grid-template-columns: 1fr;
+    padding: 40px;
+  }
+
+  .app-download-left {
+    order: 2;
+  }
+
+  .app-download-right {
+    order: 1;
+    padding: 0;
+  }
+
+  .partner-rider-container {
+    padding: 0 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .app-download-section {
+    padding: 60px 0;
+  }
+
+  .app-download-container {
+    padding: 30px 20px;
+    margin: 0 20px;
+  }
+
+  .app-heading {
+    font-size: 36px;
+  }
+
+  .subheading-orange,
+  .subheading-white {
+    font-size: 20px;
+  }
+
+  .app-description {
+    font-size: 15px;
+  }
+
+  .app-badges {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .partner-rider-section {
+    padding: 40px 0;
+  }
+
+  .partner-rider-container {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    padding: 0 20px;
+  }
+
+  .partner-card,
+  .rider-card {
+    height: 320px;
+  }
+
+  .card-title {
+    font-size: 28px;
+  }
+
+  .card-overlay {
+    padding: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .app-heading {
+    font-size: 30px;
+  }
+
+  .subheading-orange,
+  .subheading-white {
+    font-size: 18px;
+  }
+
+  .couple-image {
+    max-width: 100%;
+  }
+
+  .partner-card,
+  .rider-card {
+    height: 280px;
+  }
+
+  .card-title {
+    font-size: 24px;
+  }
+
+  .card-badge {
+    padding: 8px 16px;
+    font-size: 12px;
+  }
+
+  .card-button {
+    padding: 10px 24px;
+    font-size: 14px;
+  }
+}
