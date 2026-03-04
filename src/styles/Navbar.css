@@ -1,4 +1,5 @@
-/* Navbar Styles - 100% Match Design */
+/* Navbar Styles - Fully Responsive with Hamburger Menu */
+
 .navbar {
   background: #ffffff;
   padding: 16px 0;
@@ -15,9 +16,10 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
 }
 
-/* Logo Section */
+/* ===== LOGO ===== */
 .logo {
   display: flex;
   align-items: center;
@@ -25,8 +27,8 @@
   cursor: pointer;
   text-decoration: none !important;
   color: inherit;
+  z-index: 1002;
 }
-
 
 .logo-icon {
   font-size: 28px;
@@ -43,7 +45,41 @@
   color: #FC8A06;
 }
 
-/* Navigation Menu */
+/* ===== HAMBURGER MENU (Mobile Only) ===== */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  z-index: 1002;
+  transition: all 0.3s ease;
+}
+
+.hamburger-line {
+  width: 25px;
+  height: 3px;
+  background: #000000;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+/* Hamburger Animation when Active */
+.hamburger.active .hamburger-line:nth-child(1) {
+  transform: rotate(45deg) translate(7px, 7px);
+}
+
+.hamburger.active .hamburger-line:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active .hamburger-line:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -7px);
+}
+
+/* ===== NAVIGATION MENU ===== */
 .nav-menu {
   display: flex;
   gap: 50px;
@@ -64,7 +100,12 @@
   color: #FC8A06;
 }
 
-/* Right Side Actions */
+/* Mobile Menu Buttons - Hidden on Desktop */
+.nav-menu-mobile-buttons {
+  display: none;
+}
+
+/* ===== RIGHT SIDE ACTIONS ===== */
 .nav-right {
   display: flex;
   gap: 12px;
@@ -126,7 +167,12 @@
   box-shadow: 0 6px 20px rgba(252, 138, 6, 0.3);
 }
 
-/* Responsive */
+/* Overlay for mobile menu */
+.nav-overlay {
+  display: none;
+}
+
+/* ===== TABLET RESPONSIVE ===== */
 @media (max-width: 1024px) {
   .nav-container {
     padding: 0 30px;
@@ -135,24 +181,127 @@
   .nav-menu {
     gap: 30px;
   }
+
+  .logo-text {
+    font-size: 25px;
+    padding-left: -10px;
+  }
 }
 
+/* ===== MOBILE RESPONSIVE ===== */
 @media (max-width: 768px) {
-  .nav-menu {
-    display: none;
-  }
-
   .nav-container {
     padding: 0 20px;
   }
 
-  .logo-text {
-    font-size: 24px;
+  /* Show Hamburger Menu */
+  .hamburger {
+    display: flex;
   }
 
-  .btn-login,
-  .btn-signup {
-    padding: 8px 20px;
-    font-size: 13px;
+  /* Hide Desktop Navigation */
+  .nav-right {
+    display: none;
+  }
+
+  /* Mobile Menu Styles */
+  .nav-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 280px;
+    height: 100vh;
+    background: #ffffff;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 0;
+    padding: 80px 30px 30px;
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+    transition: right 0.3s ease;
+    z-index: 1001;
+  }
+
+  /* Active Menu - Slide In */
+  .nav-menu.active {
+    right: 0;
+  }
+
+  /* Mobile Menu Links */
+  .nav-menu .nav-link {
+    width: 100%;
+    padding: 15px 0;
+    font-size: 16px;
+    border-bottom: 1px solid #f0f0f0;
+  }
+
+  /* Show Mobile Buttons */
+  .nav-menu-mobile-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+    margin-top: 30px;
+  }
+
+  .nav-menu-mobile-buttons .btn-login,
+  .nav-menu-mobile-buttons .btn-signup {
+    width: 100%;
+    padding: 12px 20px;
+    text-align: center;
+  }
+
+  /* Dark Overlay */
+  .nav-overlay {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    animation: fadeIn 0.3s ease;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  /* Logo Adjustments */
+  .logo-text {
+    font-size: 25px;
+    padding-left: -10px;
+  }
+
+  .logo-icon {
+    font-size: 24px;
+    padding-top: 8px;
+    padding-left: 10px;
+  }
+}
+
+/* ===== VERY SMALL MOBILE ===== */
+@media (max-width: 480px) {
+  .nav-container {
+    padding: 0 15px;
+  }
+
+  .logo-text {
+    font-size: 25px;
+    padding-left: -10px;
+  }
+
+  .logo-icon {
+    font-size: 22px;
+  }
+
+  .nav-menu {
+    width: 250px;
   }
 }
