@@ -11,50 +11,209 @@ const FlashDeals = () => {
     { id: 'others', name: 'others' }
   ];
 
-  const deals = [
-    {
-      id: 1,
-      image: '/images/chef-burgers.jpg',
-      discount: '-40%',
-      restaurant: 'Chef Burgers London',
-      fallback: 'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=400&h=300&fit=crop'
-    },
-    {
-      id: 2,
-      image: '/images/grand-ai-cafe.jpg',
-      discount: '-20%',
-      restaurant: 'Grand Ai Cafe London',
-      fallback: 'https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=400&h=300&fit=crop'
-    },
-    {
-      id: 3,
-      image: '/images/butterbrot-cafe.jpg',
-      discount: '-17%',
-      restaurant: "Butterbrot Caf'e London",
-      fallback: 'https://images.unsplash.com/photo-1504754524776-8f4f37790ca0?w=400&h=300&fit=crop'
-    },
-     {
-      id: 4,
-      image: '/images/butterbrot-cafe.jpg',
-      discount: '-30%',
-      restaurant: "Purl Plaza Leeds",
-      fallback: 'https://images.unsplash.com/photo-1506354666786-959d6d497f1a?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
-    },
-     {
-      id: 5,
-      image: '/images/butterbrot-cafe.jpg',
-      discount: '-15%',
-      restaurant: "Express Food Birminham",
-      fallback: 'https://plus.unsplash.com/premium_photo-1666649675527-6a7859752c53?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
-    },
-     {
-      id: 6,
-      image: '/images/butterbrot-cafe.jpg',
-      discount: '-25%',
-      restaurant: "Marine Bay London",
-      fallback: 'https://images.unsplash.com/photo-1670164745517-5b41d4660613?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
-    }
-  ];
+const deals = [
+
+  // ================= PIZZA & FAST FOOD =================
+  {
+    id: 1,
+    category: 'pizza',
+    image: '/images/burger.jpg',
+    discount: '-40%',
+    restaurant: 'Chef Burgers London',
+    fallback: 'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=400&h=300&fit=crop'
+  },
+  {
+    id: 2,
+    category: 'pizza',
+    image: '/images/pizza.jpg',
+    discount: '-25%',
+    restaurant: 'Pizza Palace Manchester',
+    fallback: 'https://images.unsplash.com/photo-1513104890138-7c749659a591?w=400&h=300&fit=crop'
+  },
+  {
+    id: 3,
+    category: 'pizza',
+    image: '/images/fries.jpg',
+    discount: '-15%',
+    restaurant: 'Fast Bites Leeds',
+    fallback: 'https://images.unsplash.com/photo-1571091718767-18b5b1457add?w=400&h=300&fit=crop'
+  },
+  {
+    id: 4,
+    category: 'pizza',
+    image: '/images/hotdog.jpg',
+    discount: '-30%',
+    restaurant: 'Hot Grill Express',
+    fallback: 'https://images.unsplash.com/photo-1612392062798-2b2cf388b6c0?w=400&h=300&fit=crop'
+  },
+  {
+    id: 5,
+    category: 'pizza',
+    image: '/images/fried-chicken.jpg',
+    discount: '-22%',
+    restaurant: 'Crunchy Chicken Hub',
+    fallback: 'https://images.unsplash.com/photo-1562967914-608f82629710?w=400&h=300&fit=crop'
+  },
+  {
+    id: 6,
+    category: 'pizza',
+    image: '/images/sandwich.jpg',
+    discount: '-18%',
+    restaurant: 'Street Sandwich Point',
+    fallback: 'https://images.unsplash.com/photo-1528735602780-2552fd46c7af?w=400&h=300&fit=crop'
+  },
+
+  // ================= VEGAN =================
+  {
+    id: 7,
+    category: 'vegan',
+    image: '/images/vegan-salad.jpg',
+    discount: '-20%',
+    restaurant: 'Green Bowl Cafe',
+    fallback: 'https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=400&h=300&fit=crop'
+  },
+  {
+    id: 8,
+    category: 'vegan',
+    image: '/images/healthy-food.jpg',
+    discount: '-18%',
+    restaurant: 'Healthy Vegan Kitchen',
+    fallback: 'https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=400&h=300&fit=crop'
+  },
+  {
+    id: 9,
+    category: 'vegan',
+    image: '/images/vegan-wrap.jpg',
+    discount: '-22%',
+    restaurant: 'Nature Fresh Foods',
+    fallback: 'https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=400&h=300&fit=crop'
+  },
+  {
+    id: 10,
+    category: 'vegan',
+    image: '/images/fruit-bowl.jpg',
+    discount: '-12%',
+    restaurant: 'Organic Delight London',
+    fallback: 'https://images.unsplash.com/photo-1505253716362-afaea6c5d1af?w=400&h=300&fit=crop'
+  },
+  {
+    id: 11,
+    category: 'vegan',
+    image: '/images/vegan-pasta.jpg',
+    discount: '-16%',
+    restaurant: 'Pure Vegan Pasta',
+    fallback: 'https://images.unsplash.com/photo-1473093295043-cdd812d0e601?w=400&h=300&fit=crop'
+  },
+  {
+    id: 12,
+    category: 'vegan',
+    image: '/images/smoothie.jpg',
+    discount: '-28%',
+    restaurant: 'Fresh Juice & Smoothie',
+    fallback: 'https://images.unsplash.com/photo-1502741338009-cac2772e18bc?w=400&h=300&fit=crop'
+  },
+
+  // ================= SUSHI =================
+  {
+    id: 13,
+    category: 'sushi',
+    image: '/images/sushi.jpg',
+    discount: '-17%',
+    restaurant: 'Tokyo Sushi House',
+    fallback: 'https://images.unsplash.com/photo-1579871494447-9811cf80d66c?w=400&h=300&fit=crop'
+  },
+  {
+    id: 14,
+    category: 'sushi',
+    image: '/images/noodles.jpg',
+    discount: '-10%',
+    restaurant: 'Sakura Asian Foods',
+    fallback: 'https://images.unsplash.com/photo-1617093727343-374698b1b08d?w=400&h=300&fit=crop'
+  },
+  {
+    id: 15,
+    category: 'sushi',
+    image: '/images/ramen.jpg',
+    discount: '-28%',
+    restaurant: 'Ramen King Birmingham',
+    fallback: 'https://images.unsplash.com/photo-1557872943-16a5ac26437e?w=400&h=300&fit=crop'
+  },
+  {
+    id: 16,
+    category: 'sushi',
+    image: '/images/dumplings.jpg',
+    discount: '-15%',
+    restaurant: 'Dragon Sushi Bar',
+    fallback: 'https://images.unsplash.com/photo-1563245372-f21724e3856d?w=400&h=300&fit=crop'
+  },
+  {
+    id: 17,
+    category: 'sushi',
+    image: '/images/tempura.jpg',
+    discount: '-24%',
+    restaurant: 'Tempura Express',
+    fallback: 'https://images.unsplash.com/photo-1604908554027-3f4b7b1a5f28?w=400&h=300&fit=crop'
+  },
+  {
+    id: 18,
+    category: 'sushi',
+    image: '/images/asian-rice.jpg',
+    discount: '-21%',
+    restaurant: 'Asian Rice Bowl',
+    fallback: 'https://images.unsplash.com/photo-1512058564366-18510be2db19?w=400&h=300&fit=crop'
+  },
+
+  // ================= OTHERS =================
+  {
+    id: 19,
+    category: 'others',
+    image: '/images/breakfast.jpg',
+    discount: '-25%',
+    restaurant: 'Morning Breakfast Hub',
+    fallback: 'https://images.unsplash.com/photo-1533089860892-a7c6f0a88666?w=400&h=300&fit=crop'
+  },
+  {
+    id: 20,
+    category: 'others',
+    image: '/images/soup.jpg',
+    discount: '-20%',
+    restaurant: 'Soup World London',
+    fallback: 'https://images.unsplash.com/photo-1547592166-23ac45744acd?w=400&h=300&fit=crop'
+  },
+  {
+    id: 21,
+    category: 'others',
+    image: '/images/pasta.jpg',
+    discount: '-14%',
+    restaurant: 'Italian Pasta Corner',
+    fallback: 'https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?w=400&h=300&fit=crop'
+  },
+  {
+    id: 22,
+    category: 'others',
+    image: '/images/cake.jpg',
+    discount: '-35%',
+    restaurant: 'Sweet Dessert Cafe',
+    fallback: 'https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?w=400&h=300&fit=crop'
+  },
+  {
+    id: 23,
+    category: 'others',
+    image: '/images/icecream.jpg',
+    discount: '-27%',
+    restaurant: 'Ice Cream Factory',
+    fallback: 'https://images.unsplash.com/photo-1563805042-7684c019e1cb?w=400&h=300&fit=crop'
+  },
+  {
+    id: 24,
+    category: 'others',
+    image: '/images/coffee.jpg',
+    discount: '-19%',
+    restaurant: 'Coffee Time Cafe',
+    fallback: 'https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=400&h=300&fit=crop'
+  }
+
+];
 
   const categories = [
     {
@@ -101,6 +260,10 @@ const FlashDeals = () => {
     }
   ];
 
+  const filteredDeals = deals.filter(
+  deal => deal.category === activeTab
+);
+
   return (
     <>
       {/* Flash Deals Section */}
@@ -126,7 +289,7 @@ const FlashDeals = () => {
 
           {/* Deals Grid */}
           <div className="deals-grid">
-            {deals.map(deal => (
+            {filteredDeals.map(deal => (
               <div key={deal.id} className="deal-card">
                 <div className="deal-image-wrapper">
                   <img
